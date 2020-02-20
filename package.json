@@ -1,0 +1,32 @@
+{
+  "name": "gatsby-plugin-stencil",
+  "description": "Gatsby server side rendering for your Stencil web components.",
+  "version": "0.0.1",
+  "author": "Jon Earley",
+  "bugs": {
+    "url": "https://github.com/jonearley/gatsby-plugin-stencil/issues"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-emotion#readme",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "stencil",
+    "web components",
+    "server side rendering"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "devDependencies": {
+    "glob": "^7.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonearley/gatsby-plugin-stencil"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
