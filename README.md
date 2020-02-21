@@ -18,8 +18,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-stencil`,
       options: {
-        // The module of your components (required).
-        module: "@umich-lib/components"
+        // The module of your components (required), eg "@ionic/core".
+        module: "your-stencil-components"
       }
     }
   ]
