@@ -7,13 +7,18 @@ const fs = require("fs");
 exports.onPostBuild = async ({}, pluginOptions) => {
   const stencil = require(pluginOptions.module + "/hydrate");
   const files = glob.sync("public/**/*.html");
+  const renderToStringOptions = pluginOptions.renderToStringOptions
+    ? pluginOptions.renderToStringOptions
+    : {};
+
   return Promise.all(
-    files.map(async file => {
+    files.map(async (file) => {
       try {
         const html = fs.readFileSync(file, "utf8");
-        const result = await stencil.renderToString(html, {
-          prettyHtml: true
-        });
+        const result = await stencil.renderToString(
+          html,
+          renderToStringOptions
+        );
         fs.writeFileSync(file, result.html);
         return result;
       } catch (e) {
